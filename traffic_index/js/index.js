@@ -17,8 +17,6 @@ $(function () {
         });
 
         $(window).bind("scroll", function () {
-            console.log($(document).scrollTop());
-            console.log($(window).height());
             if ($(document).scrollTop() > 500) {
                 $('.nav-fixed').show();
             } else {
