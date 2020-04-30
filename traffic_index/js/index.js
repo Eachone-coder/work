@@ -21,10 +21,8 @@ $(function () {
             console.log($(window).height());
             if ($(document).scrollTop() > 500) {
                 $('.nav-fixed').show();
-                $('.kefu').show();
             } else {
                 $('.nav-fixed').hide();
-                $('.kefu').hide();
             }
         });
     });

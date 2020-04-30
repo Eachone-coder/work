@@ -106,6 +106,7 @@ img {
     background: #15499A;
     border-radius: 16px;
     text-align: center;
+    z-index: 100;
 }
 
 .kefu a {
@@ -417,6 +418,7 @@ img {
 .nav-banner .search .form-control {
     height: 25px;
     line-height: 25px;
+    color: #FFFFFF;
 }
 
 .nav .search .input-group-addo {
@@ -437,6 +439,7 @@ img {
     border-top-left-radius: 0;
     background: transparent;
     border: 0;
+    cursor: pointer;
 }
 
 .nav .search .input-group-addo img {
