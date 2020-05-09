@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>仿照百度H5人脸识别界面</title>
+    <link rel="stylesheet" href="./css/normalize.css?v=20200509">
+    <link rel="stylesheet" href="./css/baiduh5.css?v=20200509">
+</head>
+
+<body>
+    <div class="layout">
+        <div class="page-title">
+            <div class="go-back"></div>
+            <div>身份核验</div>
+        </div>
+
+        <div class="check nuxt-slot">
+            <div class="steps">
+                <div class="step-item finished">
+                    <div class="content">人脸核验</div>
+                </div>
+            </div>
+            <div class="pic">
+                <div class="standard" style="display: none;"></div>
+                <div class="tip" style="display: none;">标准示意图</div>
+                <div class="video-camera">
+                    <div class="video-area" id="my_camera">
+                        <video playsinline x5-video-player-type="h5-page" webkit-playsinline class="camera"
+                            autoplay></video>
+                    </div>
+                    <div class="video-bac"></div>
+                </div>
+                <div class="sep">错误示例</div>
+                <div class="wrong-img">
+                    <div>
+                        <div class="img blur">
+                            <div class="wrong"></div>
+                        </div>
+                        <div class="title">照片模糊</div>
+                    </div>
+                    <div>
+                        <div class="img side">
+                            <div class="wrong"></div>
+                        </div>
+                        <div class="title">侧面照片</div>
+                    </div>
+                    <div>
+                        <div class="img size">
+                            <div class="wrong"></div>
+                        </div>
+                        <div class="title">大小不合适</div>
+                    </div>
+                    <div>
+                        <div class="img reflect">
+                            <div class="wrong"></div>
+                        </div>
+                        <div class="title">强烈反光</div>
+                    </div>
+                </div>
+
+                <div class="control">
+                    <div class="button button primary" id="photo">
+                        拍摄
+                    </div>
+                </div>
+                <input id="image-input" type="file" name="image" accept="image/*" capture="camera" class="image-input">
+            </div>
+
+            <div class="fixed-mask loading-mask" id="loading" style="display: none;">
+                <div class="mask"></div>
+                <div id="img"></div>
+                <div class="upload-tip">
+                    <div class="img"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script type="text/javascript" src="./js/webcam.min.js"></script>
+    <script language="javascript">
+		Webcam.set({
+			// live preview size
+			width: 250,
+			height: 250,
+			
+			// device capture size
+			dest_width: 250,
+			dest_height: 250,
+			
+			// final cropped size
+			crop_width: 250,
+			crop_height: 250,
+			
+			// format and quality
+			image_format: 'jpeg',
+			jpeg_quality: 90,
+			constraints : {
+				video: true,
+				facingMode: "user"  //environment
+			}
+		});
+		
+		Webcam.attach( '#my_camera' );
+	</script>
+    <script src="./js/baiduh5.js"></script>
+</body>
+
+</html>

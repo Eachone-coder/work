@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>仿照百度H5身份证识别界面</title>
+    <link rel="stylesheet" href="./css/normalize.css?v=20200509">
+    <link rel="stylesheet" href="./css/baiduh5.css?v=20200509">
+</head>
+
+<body>
+    <div class="layout">
+        <div class="page-title">
+            <div class="go-back"></div>
+            <div>身份核验</div>
+        </div>
+
+        <div class="verify nuxt">
+            <div class="steps">
+                <div class="step-item finished">
+                    <div class="content">1、身份证信息录入</div>
+                    <div class="sep"></div>
+                </div>
+                <div class="step-item">
+                    <div class="content">2、人脸核验</div>
+                </div>
+            </div>
+            <div class="confirm-tip">请确认下列信息是否与证件一致，如信息有误请修改</div>
+            <div class="card-id input-all">
+                <div class="input-title">
+                    <div>姓</div>
+                    <div>名</div>
+                </div> <input placeholder="请输入姓名" type="text" class="input-text">
+            </div>
+            <div class="card-name input-all">
+                <div class="input-title">
+                    <div>证</div>
+                    <div>件</div>
+                    <div>号</div>
+                </div> <input placeholder="请输入证件号" type="text" class="input-text">
+            </div>
+            <!---->
+            <div class="re-photo">重新拍摄</div>
+            <div class="next-button control">
+                <!-- <div class="button button primary disabled">下一步</div> -->
+                <a class="button button primary disabled" href="baiduh5.html">
+                    下一步
+                </a>
+            </div>
+
+            <div class="fixed-mask loading-mask" id="loading" style="display: none;">
+                <div class="mask"></div>
+                <div id="img"></div>
+                <div class="upload-tip">
+                    <div class="img"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

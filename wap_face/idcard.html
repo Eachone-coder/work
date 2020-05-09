@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>仿照百度H5身份证识别界面</title>
+    <link rel="stylesheet" href="./css/normalize.css?v=20200509">
+    <link rel="stylesheet" href="./css/baiduh5.css?v=20200509">
+</head>
+
+<body>
+    <div class="layout">
+        <div class="page-title">
+            <div class="go-back"></div>
+            <div>身份核验</div>
+        </div>
+        <div class="verify nuxt-slot">
+            <div class="steps">
+                <div class="step-item finished">
+                    <div class="content">1、身份证信息录入</div>
+                    <div class="sep"></div>
+                </div>
+                <div class="step-item">
+                    <div class="content">2、人脸核验</div>
+                    <!---->
+                </div>
+            </div>
+            <div class="title">请上传您本人的身份证正反面照片</div>
+            <div class="card-front card">
+                <div class="tip">
+                    <div class="add"></div>
+                    <div class="tip-text">上传身份证人像面</div>
+                </div>
+            </div>
+            <div class="card-back card">
+                <div class="tip">
+                    <div class="add"></div>
+                    <div class="tip-text">上传身份证国徽面</div>
+                </div>
+            </div>
+            <div class="examples">
+                <div class="example-tip">拍摄照片要求</div>
+                <div class="example-all">
+                    <div class="example-item right standard">
+                        <div class="example-img"></div>
+                        <div class="example-text">
+                            <div class="example-text-icon"></div>
+                            <div class="example-text-name">标准拍摄</div>
+                        </div>
+                    </div>
+                    <div class="example-item frame">
+                        <div class="example-img"></div>
+                        <div class="example-text">
+                            <div class="example-text-icon"></div>
+                            <div class="example-text-name">边框缺失</div>
+                        </div>
+                    </div>
+                    <div class="example-item blur">
+                        <div class="example-img"></div>
+                        <div class="example-text">
+                            <div class="example-text-icon"></div>
+                            <div class="example-text-name">照片模糊</div>
+                        </div>
+                    </div>
+                    <div class="example-item flash">
+                        <div class="example-img"></div>
+                        <div class="example-text">
+                            <div class="example-text-icon"></div>
+                            <div class="example-text-name">闪光强烈</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="next-button">
+                <a href="verify.html" class="button button primary disabled" id="next">下一步</a>
+                <!-- <div class="button button primary disabled">
+                    下一步
+                </div> -->
+            </div>
+            <input id="upoad-front" type="file" name="front" accept="image/*" class="upload-image">
+            <input id="upoad-back" type="file" name="back" accept="image/*" class="upload-image">
+
+            <div class="fixed-mask loading-mask" id="loading" style="display: none;">
+                <div class="mask"></div>
+                <div id="img"></div>
+                <div class="upload-tip">
+                    <div class="img"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
