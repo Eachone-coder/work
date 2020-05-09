@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js中文转拼音</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/ChinesePY.js"></script>
+</head>
+
+<body>
+    <input type="text" class="input"
+        onkeyup="pym.innerHTML = Pinyin.GetJP(this.value);allpym.innerHTML=Pinyin.GetQP(this.value);staffpym.innerHTML=Pinyin.GetHP(this.value);" />
+    <br />
+    <blockquote class="quote">拼 音 码： <span id="pym"></span></blockquote>
+    <blockquote class="quote">拼音全码： <span id="allpym"></span></blockquote>
+    <blockquote class="quote">混 拼 码： <span id="staffpym"></span></blockquote>
+
+</body>
+
+</html>
