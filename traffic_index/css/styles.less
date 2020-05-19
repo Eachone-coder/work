@@ -2,6 +2,14 @@
 
 @charset 'utf-8';
 
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing   : border-box;
+    box-sizing        : border-box;
+}
+
 html,
 body,
 div,
@@ -666,12 +674,13 @@ img {
                 }
 
                 .site-content {
-                    max-height: 216px;
-                    height: 216px;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    display: -webkit-box;
+                    max-height        : 216px;
+                    height            : 216px;
+                    overflow          : hidden;
+                    text-overflow     : ellipsis;
+                    display           : -webkit-box;
                     -webkit-box-orient: vertical;
+
                     p {
                         font-size  : 12px;
                         font-weight: 400;
